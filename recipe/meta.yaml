@@ -1,4 +1,4 @@
-{% set version = "2.12.11" %}
+{% set version = "2.12.13" %}
 
 package:
     name: spyne
@@ -6,8 +6,8 @@ package:
 
 source:
     fn: spyne-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/s/spyne/spyne-{{ version }}.tar.gz
-    md5: 6073a472efa3e44647811a596b88cb4a
+    url: https://pypi.io/packages/source/s/spyne/spyne-{{ version }}.tar.gz
+    sha256: 0aa5d4ba239555c4640080199fdbad1567efd503e936ca9b809f198a529a111a
 
 build:
     number: 0
@@ -75,7 +75,7 @@ test:
 about:
     home: http://spyne.io
     license: LGPL-2.1
-    summary: A transport and architecture agnostic rpc library that focuses on exposing public services with a well-defined API
+    summary: 'A transport and architecture agnostic rpc library that focuses on exposing public services with a well-defined API.'
 
 extra:
     recipe-maintainers:

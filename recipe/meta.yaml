@@ -1,4 +1,4 @@
-{% set version = "2.12.14" %}
+{% set version = "2.12.15" %}
 
 package:
   name: spyne
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/spyne/spyne-{{ version }}.tar.gz
-  sha256: d37dfba126a6ce4e201ad63e31beb0a0e158b4580b1aa753c12310134a4cf0ae
+  sha256: 02d483aa7b2df9e2abb7ece413c4fc8f941a1bd7b67b4a8fde2e00b635f2c441
 
 build:
   number: 1000

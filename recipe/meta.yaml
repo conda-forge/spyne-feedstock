@@ -27,7 +27,7 @@ test:
   requires:
     - lxml
     - zope.interface
-    - sqlalchemy
+    - sqlalchemy <1.0.99
     - pyzmq
     - werkzeug
     - pyparsing

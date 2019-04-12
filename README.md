@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About spyne
 ===========
 
@@ -18,9 +14,14 @@ Summary: A transport and architecture agnostic rpc library that focuses on expos
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/spyne-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/spyne-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/spyne-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/spyne-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/spyne-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/spyne-feedstock/branch/master)
+
+<table><tr>
+    <td>All platforms:</td>
+    <td>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================

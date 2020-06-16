@@ -3,11 +3,11 @@ About spyne
 
 Home: http://spyne.io
 
-Package license: LGPL-2.1
+Package license: LGPL-2.1-or-later
 
 Feedstock license: BSD 3-Clause
 
-Summary: A transport and architecture agnostic rpc library that focuses on exposing public services with a well-defined API.
+Summary: A transport and architecture agnostic rpc library that focuses on exposing public services with a well-defined API
 
 
 

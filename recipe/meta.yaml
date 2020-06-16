@@ -11,20 +11,25 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - sort_wsdl = spyne.test.sort_wsdl:main
 
 requirements:
   host:
-    - python <3.7
+    - python
     - pip
+    - colorama
+    - coverage
+    - pytest
+    - tox
   run:
-    - python <3.7
+    - python
     - pytz
 
 test:
   requires:
+    - pip
     - lxml
     - zope.interface
     - sqlalchemy <1.0.99
@@ -41,7 +46,6 @@ test:
     - spyne
     - spyne.auxproc
     - spyne.client
-    # - spyne.client.twisted  # [not py3k]
     - spyne.const
     - spyne.interface
     - spyne.interface.wsdl
@@ -54,7 +58,6 @@ test:
     - spyne.protocol.html
     - spyne.protocol.soap
     - spyne.server
-    # - spyne.server.twisted  # [not py3k]
     - spyne.store
     - spyne.store.relational
     - spyne.test
@@ -71,12 +74,15 @@ test:
     - spyne.test.transport
     - spyne.util
     - spyne.util.oset
+  commands:
+    - pip check
+    - sort_wsdl --help
 
 about:
   home: http://spyne.io
-  license: LGPL-2.1
+  license: LGPL-2.1-or-later
   license_file: LICENSE
-  summary: A transport and architecture agnostic rpc library that focuses on exposing public services with a well-defined API.
+  summary: A transport and architecture agnostic rpc library that focuses on exposing public services with a well-defined API
 
 extra:
   recipe-maintainers:

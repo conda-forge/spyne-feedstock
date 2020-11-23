@@ -1,4 +1,4 @@
-{% set version = "2.12.16" %}
+{% set version = "2.13.16" %}
 
 package:
   name: spyne
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/spyne/spyne-{{ version }}.tar.gz
-  sha256: 4793b1b22cc90b4896f14560f5bd587fe9ba2a04479f24d055ad5a43c09dc97b
+  sha256: 439e9fab8d9fd61b260fafe4df326630c92c652e94f5b53d403d76c58283c80c
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - sort_wsdl = spyne.test.sort_wsdl:main
 
@@ -76,7 +76,7 @@ about:
   home: http://spyne.io
   license: LGPL-2.1
   license_file: LICENSE
-  summary: 'A transport and architecture agnostic rpc library that focuses on exposing public services with a well-defined API.'
+  summary: A transport and architecture agnostic rpc library that focuses on exposing public services with a well-defined API.
 
 extra:
   recipe-maintainers:

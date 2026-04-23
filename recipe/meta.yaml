@@ -5,22 +5,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/spyne/spyne-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/spyne/spyne-{{ version }}.tar.gz
   sha256: 063e950e179a7d5b06b577c9f2c9091a70d40217f1a853076b3709caa2bf3a16
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - sort_wsdl = spyne.test.sort_wsdl:main
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3
+    - python >={{ python_min }}
     - pytz
 
 test:
@@ -37,6 +38,7 @@ test:
     - msgpack-python
     - pyyaml
     - simplejson
+    - python {{ python_min }}
   imports:
     - spyne
     - spyne.auxproc
